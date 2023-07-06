@@ -1,108 +1,128 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-/* css grid */
-
-.container{
+  }
+  
+  .container {
     display: grid;
-    grid-template-areas: 
-    "header header"
-    "lateral-esquerdo lateral-direito"
-    "footer footer";
-}
-
-.container div{
+    grid-template-areas:
+      "header header"
+      "lateral-esquerdo lateral-direito"
+      "footer footer";
+    grid-gap: 20px; /* Adicionado espaçamento entre as células do grid */
+  }
+  
+  .container div {
     padding: 20px;
-}
-
-#header{
+  }
+  
+  #header {
     grid-area: header;
     background-color: rgb(40, 36, 51);
     color: white;
     text-align: center;
-}
-
-#lateral-esquerdo{
+  }
+  
+  #lateral-esquerdo {
     grid-area: lateral-esquerdo;
     background-color: #a2a2a2;
-}
-
-#lateral-direito{
+  }
+  
+  #lateral-direito {
     grid-area: lateral-direito;
     background-color: #a2a2a2;
-
-}
-
-#footer{
+  }
+  
+  #footer {
     grid-area: footer;
     display: flex;
     padding: 20px;
-    background-color:rgb(40, 36, 51);
+    background-color: rgb(40, 36, 51);
     color: white;
     justify-content: space-around;
     font-size: 20px;
-}
-
-/*nav*/
-
-#navegacao ul{
+  }
+  
+  /* Navegação */
+  
+  #navegacao ul {
     display: flex;
-    justify-content: right;
-    
-}
-
-#navegacao a{
+    justify-content: flex-end; /* Alinhado à direita */
+  }
+  
+  #navegacao a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 1.2em;
-}
-#navegacao a :hover{
-    
+  }
+  
+  #navegacao a:hover {
     color: rgb(0, 131, 26);
-   
-}
-
-#navegacao ul li{
+  }
+  
+  #navegacao ul li {
     margin-right: 2em;
     list-style-type: none;
-}
-
-#logo{
+  }
+  
+  #logo {
     width: 10em;
     cursor: pointer;
-}
-
-/*lateral esquerdo card*/
-
-.card{
+  }
+  
+  /* Lateral esquerdo card */
+  
+  .card {
     background-color: #fff;
     border-radius: 10px;
     padding: 10px 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
-}
-
-.card img{
+  }
+  
+  .card img {
     width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
-}
-
-button{
-    padding: 1.5em 4em;                      
+    max-width: 100%; /* Adicionado para evitar que a imagem exceda a largura do container */
+  }
+  
+  button {
+    padding: 1.5em 4em;
     background-color: black;
     color: white;
     border-radius: 10px;
     cursor: pointer;
-}
+  }
+  
+  /* Responsividade */
+  
+  @media only screen and (max-width: 768px) {
+    
 
-
-
-
-
-
-
+    .container {
+      grid-template-areas:
+        "header"
+        "lateral-esquerdo"
+        "lateral-direito"
+        "footer";
+    }
+  
+    #header {
+      text-align: left;
+    }
+  
+    #navegacao ul {
+      justify-content: flex-start; /* Alinhado à esquerda */
+    }
+  
+    #navegacao ul li {
+      margin-right: 1em;
+    }
+  
+    .card {
+      margin-bottom: 20px;
+    }
+  }
+  
