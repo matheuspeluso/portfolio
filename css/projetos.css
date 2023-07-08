@@ -1,82 +1,95 @@
-* {
+
+*{
   padding: 0;
   margin: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.container {
-  display: grid;
-  grid-template-areas:
-    "header"
-    "lateral-esquerdo"
-    "lateral-direito"
-    "footer";
-  grid-gap: 20px;
-  overflow-x: hidden;
+html,body{
+  height: 100vh;
+  background-color: #a2a2a2;
 }
 
-.container div {
+/* css grid */
+
+.container{
+  display: grid;
+  grid-template-areas: 
+  "header header"
+  "lateral-esquerdo lateral-direito"
+  "footer footer";
+}
+
+.container div{
   padding: 20px;
 }
 
-#header {
+#header{
   grid-area: header;
   background-color: rgb(40, 36, 51);
   color: white;
   text-align: center;
 }
 
-#lateral-esquerdo {
+#lateral-esquerdo{
   grid-area: lateral-esquerdo;
   background-color: #a2a2a2;
 }
 
-#lateral-direito {
+#lateral-direito{
   grid-area: lateral-direito;
   background-color: #a2a2a2;
+  margin-bottom: 10vh;
+
 }
 
-#footer {
+#footer{
   grid-area: footer;
-  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 20px;
-  background-color: rgb(40, 36, 51);
+  background-color:rgb(40, 36, 51);
   color: white;
   justify-content: space-around;
   font-size: 20px;
+  
 }
 
-/* Navegação */
+/*nav*/
 
-#navegacao ul {
+#navegacao ul{
   display: flex;
-  justify-content: flex-end;
+  justify-content: right;
+  
 }
 
-#navegacao a {
+#navegacao a{
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 1.2em;
 }
-
-#navegacao a:hover {
+#navegacao a :hover{
+  
   color: rgb(0, 131, 26);
+ 
 }
 
-#navegacao ul li {
+#navegacao ul li{
   margin-right: 2em;
   list-style-type: none;
 }
 
-#logo {
+#logo{
   width: 10em;
   cursor: pointer;
 }
 
-/* Lateral esquerdo card */
+/*lateral esquerdo card*/
 
-.card {
+.card{
   background-color: #fff;
   border-radius: 10px;
   padding: 10px 5px;
@@ -84,23 +97,24 @@
   text-align: center;
 }
 
-.card img {
+.card img{
   width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  max-width: 100%;
+
 }
 
-button {
-  padding: 1.5em 4em;
+button{
+  padding: 1.5em 4em;                      
   background-color: black;
   color: white;
   border-radius: 10px;
   cursor: pointer;
 }
 
+
 /* Responsividade */
 
-@media only screen and (max-width: 768px) {
+/* @media (max-width: 768px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -109,29 +123,84 @@ button {
     text-align: center;
   }
 
+  #header{
+    width: 100vw;
+    font-size: 10px;
+  }
+
   #lateral-esquerdo {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     background-color: white;
   }
 
   #lateral-direito {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     background-color: white;
   }
 
   .card{
-    width: 70vw;
+    width: 100vw;
   }
 
   #footer{
-    font-size:15px;
+    font-size:100%;
+    display: inline-block;
+    width: 100vw;
   }
 
-  .body{
-    background-color: #a2a2a2;
+  .html, body{
+    max-width: 100vw;
+    height: 100vh;
+  }
+} */
+
+
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #header{
+    width: calc(100vw - 17px); /* 17px é um valor comum para a largura da barra de rolagem */
+    font-size: 10px;
+  }
+
+  #lateral-esquerdo {
+    width: calc(100vw - 17px);
+    display: flex;
+    justify-content: center;
+    background-color: white;
+  }
+
+  #lateral-direito {
+    width: calc(100vw - 17px);
+    display: flex;
+    justify-content: center;
+    background-color: white;
+  }
+
+  .card{
+    width: calc(100vw - 17px);
+  }
+
+  #footer{
+    font-size: 100%;
+    display: inline-block;
+    width: calc(100vw - 17px);
+  }
+
+  html, body{
+    max-width: 100vw;
+    height: 100vh;
+    overflow-x: hidden; /* Para esconder a barra de rolagem horizontal */
   }
 }
