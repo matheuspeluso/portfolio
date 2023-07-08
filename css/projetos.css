@@ -1,128 +1,137 @@
 * {
-    padding: 0;
-    margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-  
-  .container {
-    display: grid;
-    grid-template-areas:
-      "header header"
-      "lateral-esquerdo lateral-direito"
-      "footer footer";
-    grid-gap: 20px; /* Adicionado espaçamento entre as células do grid */
-  }
-  
-  .container div {
-    padding: 20px;
-  }
-  
-  #header {
-    grid-area: header;
-    background-color: rgb(40, 36, 51);
-    color: white;
-    text-align: center;
-  }
-  
-  #lateral-esquerdo {
-    grid-area: lateral-esquerdo;
-    background-color: #a2a2a2;
-  }
-  
-  #lateral-direito {
-    grid-area: lateral-direito;
-    background-color: #a2a2a2;
-  }
-  
-  #footer {
-    grid-area: footer;
-    display: flex;
-    padding: 20px;
-    background-color: rgb(40, 36, 51);
-    color: white;
-    justify-content: space-around;
-    font-size: 20px;
-  }
-  
-  /* Navegação */
-  
-  #navegacao ul {
-    display: flex;
-    justify-content: flex-end; /* Alinhado à direita */
-  }
-  
-  #navegacao a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 1.2em;
-  }
-  
-  #navegacao a:hover {
-    color: rgb(0, 131, 26);
-  }
-  
-  #navegacao ul li {
-    margin-right: 2em;
-    list-style-type: none;
-  }
-  
-  #logo {
-    width: 10em;
-    cursor: pointer;
-  }
-  
-  /* Lateral esquerdo card */
-  
-  .card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 10px 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-  }
-  
-  .card img {
-    width: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    max-width: 100%; /* Adicionado para evitar que a imagem exceda a largura do container */
-  }
-  
-  button {
-    padding: 1.5em 4em;
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-  
-  /* Responsividade */
-  
-  @media only screen and (max-width: 768px) {
-    
+  padding: 0;
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
-    .container {
-      grid-template-areas:
-        "header"
-        "lateral-esquerdo"
-        "lateral-direito"
-        "footer";
-    }
-  
-    #header {
-      text-align: left;
-    }
-  
-    #navegacao ul {
-      justify-content: flex-start; /* Alinhado à esquerda */
-    }
-  
-    #navegacao ul li {
-      margin-right: 1em;
-    }
-  
-    .card {
-      margin-bottom: 20px;
-    }
+.container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "lateral-esquerdo"
+    "lateral-direito"
+    "footer";
+  grid-gap: 20px;
+  overflow-x: hidden;
+}
+
+.container div {
+  padding: 20px;
+}
+
+#header {
+  grid-area: header;
+  background-color: rgb(40, 36, 51);
+  color: white;
+  text-align: center;
+}
+
+#lateral-esquerdo {
+  grid-area: lateral-esquerdo;
+  background-color: #a2a2a2;
+}
+
+#lateral-direito {
+  grid-area: lateral-direito;
+  background-color: #a2a2a2;
+}
+
+#footer {
+  grid-area: footer;
+  display: flex;
+  padding: 20px;
+  background-color: rgb(40, 36, 51);
+  color: white;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+/* Navegação */
+
+#navegacao ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#navegacao a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#navegacao a:hover {
+  color: rgb(0, 131, 26);
+}
+
+#navegacao ul li {
+  margin-right: 2em;
+  list-style-type: none;
+}
+
+#logo {
+  width: 10em;
+  cursor: pointer;
+}
+
+/* Lateral esquerdo card */
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 100%;
+}
+
+button {
+  padding: 1.5em 4em;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Responsividade */
+
+@media only screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
-  
+
+  #lateral-esquerdo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+  }
+
+  #lateral-direito {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+  }
+
+  .card{
+    width: 70vw;
+  }
+
+  #footer{
+    font-size:15px;
+  }
+
+  .body{
+    background-color: #a2a2a2;
+  }
+}
