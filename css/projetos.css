@@ -15,13 +15,14 @@ html,body{
 .container{
   display: grid;
   grid-template-areas: 
-  "header header"
-  "lateral-esquerdo lateral-direito"
-  "footer footer";
+  "header header header"
+  "conteudo conteudo conteudo"
+  "footer  footer footer";
 }
 
 .container div{
   padding: 20px;
+  justify-content: baseline;
 }
 
 #header{
@@ -31,22 +32,20 @@ html,body{
   text-align: center;
 }
 
-#lateral-esquerdo{
-  grid-area: lateral-esquerdo;
+#conteudo{
+  grid-area: conteudo;
   background-color: #a2a2a2;
   margin-bottom: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
-#lateral-direito{
-  grid-area: lateral-direito;
-  background-color: #a2a2a2;
-  margin-bottom: 10vh;
-
-}
 
 #footer{
   grid-area: footer;
-  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
@@ -96,10 +95,11 @@ html,body{
   padding: 10px 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
+  width: 500px;
 }
 
 .card img{
-  width: 100%;
+  width: 90%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 }
