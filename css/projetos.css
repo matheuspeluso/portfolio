@@ -42,6 +42,7 @@ html,body{
   gap: 15px;
   margin: 0 auto;
   margin-bottom: 50px;
+  justify-content: center;
 }
 
 
@@ -70,7 +71,7 @@ html,body{
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 25px;
 }
 #navegacao a :hover{
   color: rgb(129, 94, 226);
