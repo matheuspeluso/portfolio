@@ -35,6 +35,7 @@ body {
     width: 90%;
     margin: 0 auto;
     min-width: 40px;
+    max-width: 200px;
     border-radius: 10px;
 }
 
@@ -143,7 +144,7 @@ body {
 
 /* Media Queries */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 900px) {
     .container {
         grid-template-columns: 1fr;
     }
