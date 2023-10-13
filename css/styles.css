@@ -54,12 +54,16 @@ body {
 }
 
 .logo-links a {
-    margin: 10px;
+    margin: 15px;
 }
 
-.logo-links img {
-    width: 50px;
-    margin: 0 auto;
+.logo-links .icons {
+    font-size: 30px;
+    color: #fff;
+}
+
+.logo-links .icons:hover{
+    color: rgb(129, 94, 226);
 }
 
 .nav {
@@ -76,6 +80,11 @@ body {
 .nav li>a {
     color: white;
     text-decoration: none;
+}
+
+.nav li>a:hover {
+    color: rgb(129, 94, 226);
+    border-bottom: 1px solid #fff;
 }
 
 /* grid centro conteudo */
@@ -127,8 +136,9 @@ body {
 }
 
 .sobre {
-    font-size: 20px;
+    font-size: 21px;
     color: white;
+    margin-top: 1rem;
 }
 
 /* Media Queries */
