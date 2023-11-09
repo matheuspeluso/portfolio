@@ -1,4 +1,3 @@
-
 *{
   padding: 0;
   margin: 0;
@@ -6,9 +5,11 @@
   box-sizing: border-box;
 }
 
+@import "./color";
+
 html,body{
   height: 100vh;
-  background-color: #a2a2a2;
+  background-color: $black-normal;
 }
 
 /* css grid */
@@ -19,23 +20,23 @@ html,body{
   "header header header"
   "conteudo conteudo conteudo"
   "footer  footer footer";
-}
 
-.container div{
-  padding: 20px;
-  justify-content: baseline;
+  div{
+    padding: 20px;
+    justify-content: baseline;
+  }
 }
 
 #header{
   grid-area: header;
-  background-color: rgb(40, 36, 51);
-  color: white;
+  background-color: $bg-primary-normal;
+  color: $white-normal;
   text-align: center;
 }
 
 #conteudo{
   grid-area: conteudo;
-  background-color: #a2a2a2;
+  background-color: $black-normal;
   margin-bottom: 10vh;
   display: flex;
   flex-wrap: wrap;
@@ -52,8 +53,8 @@ html,body{
   right: 0;
   bottom: 0;
   padding: 20px;
-  background-color:rgb(40, 36, 51);
-  color: white;
+  background-color: $bg-primary-normal;
+  color: $white-normal;
   justify-content: space-around;
   
   
@@ -69,13 +70,13 @@ html,body{
 
 #navegacao a{
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: $white-normal;
   font-weight: bold;
   font-size: 25px;
 }
 #navegacao a :hover{
-  color: rgb(129, 94, 226);
-  border-bottom: 1px solid #fff;
+  color: $purple-light;
+  border-bottom: 1px solid $white-normal;
  
 }
 
@@ -92,24 +93,25 @@ html,body{
 /*lateral esquerdo card*/
 
 .card{
-  background-color: #fff;
+  background-color: $white-normal;
   border-radius: 10px;
   padding: 10px 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px $white-normal;
   text-align: center;
   width: 450px;
+
+  img{
+    width: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  
+  }
 }
 
-.card img{
-  width: 90%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
-}
 
 button{
   padding: 1.5em 4em;                      
-  background-color: black;
-  color: white;
+  background-color: $black-normal;
+  color: $white-normal;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -164,6 +166,11 @@ button{
 
 
 @media (max-width: 768px) {
+
+  html,
+  body{
+    background-color: $white-normal;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -182,7 +189,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: $white-normal;
   }
 
   .card{

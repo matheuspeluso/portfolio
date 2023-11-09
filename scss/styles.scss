@@ -5,117 +5,133 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+@import "./color";
+
 html,
 body {
     height: 100%;
-    background-color: black;
+    background-color: $black-normal;
 }
 
 .container {
-    background-color: rgb(0, 0, 0);
+    background-color: $black-normal;
     padding: 15px;
     display: grid;
     grid-template-columns: 30% auto 30%;
     height: auto;
     justify-content: center;
+
+    div {
+        padding: 20px;
+        margin: 5px;
+    }
 }
 
-.container div {
-    padding: 20px;
-    margin: 5px;
-}
+
 
 .logo-nome {
-    background-color: rgb(40, 36, 51);
+    background-color: $bg-primary-normal;
     border-radius: 20px;
     text-align: center;
+
+    img {
+        width: 90%;
+        margin: 0 auto;
+        min-width: 40px;
+        max-width: 200px;
+        border-radius: 10px;
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+    }
 }
 
-.logo-nome img {
-    width: 90%;
-    margin: 0 auto;
-    min-width: 40px;
-    max-width: 200px;
-    border-radius: 10px;
-}
 
-.logo-nome p {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-}
+
+
 
 .logo-links {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgb(40, 36, 51);
+    background-color: $bg-primary-normal;
     border-radius: 20px;
-}
 
-.logo-links a {
-    margin: 15px;
-}
+    a {
+        margin: 15px;
+    }
 
-.logo-links .icons {
-    font-size: 30px;
-    color: #fff;
-}
+    .icons {
+        font-size: 30px;
+        color: $white-normal;
+    }
 
-.logo-links .icons:hover{
-    color: rgb(129, 94, 226);
+    .icons:hover{
+        color: $purple-light;
+    }
 }
 
 .nav {
-    background-color: rgb(40, 36, 51);
+    background-color: $bg-primary-normal;
     border-radius: 20px;
     text-align: center;
+
+    li {
+        font-size: 25px;
+        list-style-type: none;
+    }
+
+    li>a {
+        color: $white-normal;
+        text-decoration: none;
+    }
+
+    li>a:hover {
+        color: $purple-light;
+        border-bottom: 1px solid $white-normal;
+    }
 }
 
-.nav li {
-    font-size: 25px;
-    list-style-type: none;
-}
-
-.nav li>a {
-    color: white;
-    text-decoration: none;
-}
-
-.nav li>a:hover {
-    color: rgb(129, 94, 226);
-    border-bottom: 1px solid #fff;
-}
 
 /* grid centro conteudo */
 
 .conteudo {
-    background-color: rgb(40, 36, 51);
+    background-color: $bg-primary-normal;
     border-radius: 20px;
     text-align: center;
     padding: 20px;
-}
 
-.conteudo h2 {
-    font-size: 30px;
-    color: white;
-}
+    h2 {
+        font-size: 30px;
+        color: $white-normal;
+    }
 
-.conteudo img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 20px;
-    margin-top: 10px;
+    img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 20px;
+        margin-top: 10px;
+    }
 }
 
 /* grid side direita */
 
 .right-side {
-    background-color: rgb(40, 36, 51);
+    background-color: $bg-primary-normal;
     border-radius: 20px;
     text-align: center;
     padding: 20px;
+
+    h2 {
+        font-size: 30px;
+        color: $white-normal;
+        margin-top: 10px;
+    }
+    
 }
 
 .linguagens img {
@@ -123,11 +139,6 @@ body {
     max-width: 100%;
 }
 
-.right-side h2 {
-    font-size: 30px;
-    color: white;
-    margin-top: 10px;
-}
 
 .ultimo-pj {
     width: 100%;
@@ -138,13 +149,13 @@ body {
 
 .sobre {
     font-size: 21px;
-    color: white;
+    color: $white-normal;
     margin-top: 1rem;
 }
 
 .uj-p{
     font-size: 21px;
-    color: #fff;
+    color: $white-normal;
     margin-top: 10px;
 }
 
@@ -153,8 +164,8 @@ body {
     padding: 10px 30px;
     margin-top: 15px;
     border-radius: 5px;
-    background-color: rgb(129, 94, 226);
-    color: #fff;
+    background-color: $purple-light;
+    color: $white-normal;
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
@@ -163,7 +174,7 @@ body {
 }
 
 .ver-projeto{
-    background-color: rgb(93, 225, 93);
+    background-color: $green-light;
 }
 
 .ver-projeto:hover,
