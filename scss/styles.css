@@ -41,6 +41,22 @@ body {
   font-weight: bold;
   text-align: center;
   color: white;
+  margin-bottom: 1rem;
+}
+.logo-nome a {
+  text-decoration: none;
+}
+.logo-nome span {
+  color: #fff;
+  font-size: 20px;
+}
+.logo-nome .icons {
+  font-size: 30px;
+  color: #fff;
+  margin-left: 1rem;
+}
+.logo-nome .icons:hover {
+  color: rgb(129, 94, 226);
 }
 
 .logo-links {

@@ -47,6 +47,26 @@ body {
         font-weight: bold;
         text-align: center;
         color: white;
+        margin-bottom: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+    }
+    span{
+        color: $white-normal;
+        font-size: 20px;
+        
+    }
+
+    .icons {
+        font-size: 30px;
+        color: $white-normal;
+        margin-left: 1rem;
+    }
+
+    .icons:hover{
+        color: $purple-light;
     }
 }
 
