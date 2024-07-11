@@ -9,7 +9,7 @@
 
 html,body{
   height: 100vh;
-  background-color: $black-normal;
+  background-color: $bg-primary-normal;
 }
 
 /* css grid */
@@ -36,7 +36,7 @@ html,body{
 
 #conteudo{
   grid-area: conteudo;
-  background-color: $black-normal;
+  background-color: $bg-primary-normal;
   margin-bottom: 10vh;
   display: flex;
   flex-wrap: wrap;
