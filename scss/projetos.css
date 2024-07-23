@@ -92,6 +92,32 @@ html, body {
   width: 90%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+.card .card-btns {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.card .card-btns .btn-project {
+  padding: 0.8rem 2rem;
+  font-weight: bold;
+  background-color: rgb(93, 225, 93);
+  color: rgb(0, 0, 0);
+  border: none;
+}
+.card .card-btns .btn-project:hover {
+  opacity: 0.8;
+}
+.card .card-btns .btn-git {
+  padding: 0.8rem 1.2rem;
+  font-weight: bold;
+  border: none;
+}
+.card .card-btns .btn-git:hover {
+  opacity: 0.8;
+}
 
 button {
   padding: 1.5em 4em;

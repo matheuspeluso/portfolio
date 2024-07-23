@@ -103,7 +103,38 @@ html,body{
   img{
     width: 90%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  
+  }
+
+  .card-btns{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    
+
+    .btn-project{
+      padding: 0.8rem 2rem;
+      font-weight: bold;
+      background-color: $green-light;
+      color: $black-normal;
+      border: none;
+
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+
+    .btn-git{
+      padding: 0.8rem 1.2rem;
+      font-weight: bold;
+      border: none;
+
+      &:hover{
+        opacity: 0.8;
+      }
+    }
   }
 }
 
